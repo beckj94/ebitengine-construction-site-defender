@@ -1,4 +1,4 @@
-module github.com/sinisterstuf/ebitengine-game-template
+module github.com/beckj94/ebitengine-construction-site-defender
 
 go 1.22
 
