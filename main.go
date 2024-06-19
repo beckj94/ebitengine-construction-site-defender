@@ -5,23 +5,14 @@
 package main
 
 import (
-  "errors"
-  "image"
-  // "image/color"
-  _ "image/png"
-  _ "image/jpeg"
-  "os"
-  "log"
-  "time"
+	_ "image/jpeg"
+	_ "image/png"
 
-  "bytes"
-  "io/ioutil"
+	"github.com/beckj94/ebitengine-construction-site-defender/gameModule"
 
-  "github.com/hajimehoshi/ebiten/v2"
-  "github.com/hajimehoshi/ebiten/v2/ebitenutil"
-  "github.com/hajimehoshi/ebiten/v2/audio"
-  "github.com/hajimehoshi/ebiten/v2/audio/wav"
-  "github.com/hajimehoshi/ebiten/v2/inpututil"
+	"log"
+
+	"github.com/hajimehoshi/ebiten/v2"
 )
 
 func main() {

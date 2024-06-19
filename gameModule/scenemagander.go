@@ -1,7 +1,9 @@
 package gameModule
 
 import (
-  "github.com/hajimehoshi/ebiten/v2"
+	"log"
+
+	"github.com/hajimehoshi/ebiten/v2"
 )
 
 var (
@@ -24,14 +26,12 @@ type SceneManager struct {
 
 type GameState struct {
   SceneManager *SceneManager
-  Input *Input
 }
 
-func (s *SceneManager) Update(input *Input) error {
+func (s *SceneManager) Update() error {
   if s.transitionCount == 0 {
     return s.current.Update(&GameState{
       SceneManager: s,
-      Input: input,
     })
   }
 
@@ -66,6 +66,7 @@ func (s *SceneManager) Draw(r *ebiten.Image) {
 }
 
 func (s *SceneManager) GoTo(scene Scene) {
+  log.Printf("scene manager goes to %T", scene)
   if s.current == nil {
     s.current = scene
   } else {
